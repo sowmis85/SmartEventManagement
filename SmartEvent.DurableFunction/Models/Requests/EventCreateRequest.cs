@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartEvent.DurableFunction.Models
+namespace SmartEvent.DurableFunction.Models.Requests
 {
     public class EventCreateRequest
     {

@@ -1,4 +1,5 @@
 ﻿using SmartEvent.DurableFunction.Models;
+using SmartEvent.DurableFunction.Models.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
