@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SmartEvent.DurableFunction.Models;
+using SmartEvent.DurableFunction.Models.Requests;
 
 namespace SmartEvent.DurableFunction.Activities
 {

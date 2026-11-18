@@ -1,5 +1,5 @@
 ﻿using Microsoft.Azure.Functions.Worker;
-using SmartEvent.DurableFunction.Models;
+using SmartEvent.DurableFunction.Models.Requests;
 using SmartEvent.DurableFunction.Repositories;
 using System;
 using System.Collections.Generic;

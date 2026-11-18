@@ -1,13 +1,9 @@
 ﻿using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.DurableTask.Client;
-using SmartEvent.DurableFunction.Models;
-using SmartEvent.DurableFunction.Orchestrators;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using SmartEvent.DurableFunction.Models.Requests;
+using SmartEventDurableFunction.Orchestrators;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartEvent.DurableFunction.HttpTriggers
@@ -25,7 +21,7 @@ namespace SmartEvent.DurableFunction.HttpTriggers
 
             string instanceId =
                 await client.ScheduleNewOrchestrationInstanceAsync(
-                    nameof(EventCreationOrchestrator),
+                    nameof(RegistrationOrchestrator),
                     request);
 
             var response = req.CreateResponse(HttpStatusCode.Accepted);

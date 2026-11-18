@@ -1,7 +1,10 @@
 ﻿using Microsoft.Azure.Functions.Worker;
 using Microsoft.DurableTask;
 using SmartEvent.DurableFunction.Activities;
+using SmartEvent.DurableFunction.Common;
 using SmartEvent.DurableFunction.Models;
+using SmartEvent.DurableFunction.Models.Requests;
+using SmartEvent.DurableFunction.Models.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +31,7 @@ namespace SmartEvent.DurableFunction.Orchestrators
             {
                 return new EventResponse
                 {
-                    Status = "Validation Failed"
+                    Status = ValidationConstant.ValidationFailed
                 };
             }
 
@@ -44,7 +47,7 @@ namespace SmartEvent.DurableFunction.Orchestrators
             return new EventResponse
             {
                 EventId = eventId,
-                Status = "Created"
+                Status = ValidationConstant.EventCreated
             };
         }
     }
